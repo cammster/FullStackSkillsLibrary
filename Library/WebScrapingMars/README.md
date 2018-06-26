@@ -15,12 +15,11 @@ This application extracts the latest information on Mars from 5 web sources:
 * Interactivity with Database and Web: PyMongo to access database, Beautiful Soup for web scraping
 * Web: HTML 
 
-
-
 ## How it Works:
+When the app starts up, the html index references data from the last scraping session, which is stored in the MongoDB. 
+Then, upon clicking "Get the Latest on Mars" button, the application runs the /scrape route.
 
-When the page loads the most recent scraping results are shown. When the user clicks the "Get the Latest on Mars" button, the application goes to each site
-to update the Mongo DB. 
+* 
 
 ## To Run the App: 
 This app runs locally, so the user has to take the following steps to run it: 
@@ -30,4 +29,9 @@ This app runs locally, so the user has to take the following steps to run it:
 2. Run the mars_app.py
 * Open anaconda prompt and navigate to folder containing the app
 * Type "python mars_app.py"
+
+## Limitations
+
+Also, adding a "Last Updated" date would give tell the user the age of the information initially displayed. 
+
 
