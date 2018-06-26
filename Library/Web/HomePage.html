@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Latitude Home</title>
+  <!-- Bring in bootstrap stylesheet -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!--Navbar Links and Dropdown-->
+    <nav class="navbar navbar-default">
+
+            <div class="container-fluid">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        </button>
+                    <a class="navbar-brand" href="HomePage.html">Latitude</a>
+                </div>            
+
+                <div class="collapase navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="Comparison.html">Comparison <span class="sr-only"></span></a></li>
+                        <li class="active"><a href="Data.html">Data</a></li>
+                        <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
+                                aria-expanded="false">Visualizations <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Humidity.html">Humidity</a></li>
+                                    <li><a href="Wind.html">Wind</a></li>
+                                    <li><a href="Temp.html">Temperature</a></li>
+                                    <li><a href="Cloudiness.html">Cloudiness</a></li>
+                                </ul>
+                        </li>
+                    </ul>   
+                </div>              
+        
+            </div>    
+    </nav>
+
+<!--Webpage Contents-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Latitude: How Does it Affect You?</h1>
+          <p class="lead"> Upgrade your small talk about the weather!</p>
+        </div>
+    </div>
+    <div class="row">       
+        <div class="col-md-3">
+            <div class="container-fluid">        
+              <div class="panel panel-default">
+                  <div class="panel-body">                  
+                    <h4 >Want to Avoid a Bad Hair Day?</h4>
+                    <hr>  
+                    <figure>               
+                        <a href="Humidity.html"><img class="center" width=80%  src="Images/Badhairday.jpg" alt="Goat With Frizzy Hair"></a>
+                        <figcaption><a href="https://www.reddit.com/r/Newfiepets/comments/4pw5kk/bad_hair_day_sheep/">credit: spritesheet/Reddit</a></figcaption>
+                    </figure> 
+                    <br>
+                    <h4>Learn about latitude and humidity!</h4>
+                </div>             
+              </div>
+            </div>            
+        </div>      
+        <div class="col-md-3">
+            <div class="container-fluid">            
+                  <div class="panel panel-default">
+                      <div class="panel-body">                
+                          <h4>Want to Fly a Kite?</h4>
+                            <hr>  
+                            <figure>               
+                                <a href="Wind.html"><img class="center" width=80% src="Images/windkites.jpg" alt="Kites Flying"></a>
+                                <figcaption><a href="http://www.graysharbortalk.com/2015/06/06/kite-flying-grays-harbor-beach/">credit: Ocean Shores Kites</a></figcaption>
+                            </figure> 
+                            <br>
+                            <h4>Learn about latitude and wind speed!</h4>                            
+                        </div>             
+                  </div>
+            </div>            
+        </div>  
+        
+
+        <div class="col-md-3">
+                <div class="container-fluid">            
+                      <div class="panel panel-default">
+                          <div class="panel-body">                
+                              <h4>Cold Natured?</h4>
+                                <hr>  
+                                <figure>               
+                                    <a href="Temp.html"><img class="center" width=100%  src="Images/tempthermometer.jpg" alt="Kites Flying"></a>
+                                    <figcaption><a href="https://sciencing.com/four-types-temperature-scales-7472070.html">credit: Sciencing.com</a></figcaption>
+                                </figure> 
+                                <br>
+                                <h4>Learn about latitude and temperature!</h4>                                
+                            </div>             
+                      </div>
+                </div>            
+            </div>  
+
+            <div class="col-md-3">
+                    <div class="container-fluid">            
+                          <div class="panel panel-default">
+                              <div class="panel-body">                
+                                  <h4>Enjoy huddling under the cloud covers?</h4>
+                                    <hr>  
+                                    <figure>               
+                                        <a href="Cloudiness.html"><img class="center" width=80%  src="Images/cloudyday.jpg" alt="Cloudy Day"></a>
+                                        <figcaption><a href="https://www.colesclassroom.com/8-quick-tips-mastering-cloudy-day-photography/">credit: Cole's Classroom</a></figcaption>
+                                    </figure> 
+                                    <br>
+                                    <h4>Learn about latitude and cloudiness!</h4>
+                                </div>             
+                          </div>
+                    </div>            
+                </div>  
+        
+    </div>
+<!--Bottom Navbar-->
+    <div class="container-fluid">        
+        <nav class="footer">                
+            <hr>
+            University of Texas at Austin, Data Analytics and Visualization        
+            <p>Andrea Karaffa 2018</p>
+        </nav>
+    </div>
+    
+</body>
+</html>

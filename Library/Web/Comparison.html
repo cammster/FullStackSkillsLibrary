@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Comparison</title>
+
+  <!-- Bring in bootstrap stylesheet -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!--Navbar Links and Dropdown-->
+    <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        </button>
+                    <a class="navbar-brand" href="HomePage.html">Latitude</a>
+                </div>            
+
+                <div class="collapase navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="Comparison.html">Comparison <span class="sr-only"></span></a></li>
+                        <li class="active"><a href="Data.html">Data</a></li>
+                        <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
+                                aria-expanded="false">Visualizations <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Humidity.html">Humidity</a></li>
+                                    <li><a href="Wind.html">Wind</a></li>
+                                    <li><a href="Temp.html">Temperature</a></li>
+                                    <li><a href="Cloudiness.html">Cloudiness</a></li>
+                                </ul>
+                        </li>
+                    </ul>   
+                </div>
+
+            </div>    
+    </nav>
+
+<!--Webpage Contents-->
+   
+   <div class="container">
+       <div class="row">
+
+           <div class="col-md-6">
+                <div class="thumbnail">
+                            <h4 >Humidity</h4>
+                            <hr>  
+                            <a href="Humidity.html"><img class="center" width=100%  src="Images/LatitudevsHumidity.png" alt="Graph of Latitude vs Humidity"></a>
+                </div>
+            </div>           
+            <div class="col-md-6">
+                <div class="thumbnail"> 
+                           <h4>Wind</h4>
+                            <hr>  
+                            <a href="Wind.html"><img class="center" width=100% src="Images/LatitudevsWindSpeed.png" alt="Graph of Latitude vs Wind Speed"></a>
+                 </div>             
+            </div>                  
+          
+        </div>
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <h4>Temperature</h4>
+                    <hr>
+                    <a href="Temp.html"><img class="center" width=100%  src="Images/LatitudevsTemp.png" alt="Graph of Latitude vs Temperature"></a>
+                </div>
+            </div>           
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <h4>Cloudiness</h4>
+                    <hr>
+                    <a href="Cloudiness.html"><img class="center" width=100%  src="Images/LatitudevsCloudiness.png" alt="Graph of Latitude vs Cloudiness"></a>
+                </div>
+            </div>
+            
+        </div>
+
+<!--Bottom Navbar-->
+    <div class="container-fluid">
+        <nav class="footer">                
+            <hr>
+            University of Texas at Austin, Data Analytics and Visualization        
+            <p>Andrea Karaffa 2018</p>              
+        </nav>
+    </div>
+    
+</body>
+</html>

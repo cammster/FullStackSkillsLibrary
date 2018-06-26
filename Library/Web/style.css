@@ -1,0 +1,118 @@
+
+  .navbar-default {
+      background-color: white;
+      background-image:none;
+      background-repeat:no-repeat;
+  }
+
+  .navbar-default .navbar-brand {
+      background-color:  #068b8b;
+      color: white;
+      font-weight: bold;
+      font-size:xx-large;
+      font-family: garamond;
+      text-align: center;
+      position: relative;
+      left: 80px
+
+  }
+
+  body {
+      background-color:lightgray;
+  }
+
+  h1, h2, h3, h4{
+      color:#068b8b;
+  }
+
+nav.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: darkslategray;    
+    color: white;
+    align-items:center;
+    text-align: center;
+    
+
+}
+
+.panel {
+    background-color: white;
+    padding: 15px; 
+    border: 10px;
+    margin: 10 px;
+}
+
+.container-fluid {
+    max-width:1400px;
+    background-color: white;
+}
+
+/* .container {
+    max-height:300px;
+} */
+
+.thumbnail {
+    max-height: 400px;
+    max-width: 400px;
+    background-color:white;
+    padding: 10px; 
+    border: 10px;
+    margin: 5 px;
+}
+
+
+hr {
+    border: 2px solid #068b8b;
+    width: 100%;
+    
+}
+
+.thumbnail> hr {
+    border: 1px solid #068b8b;
+    width:100%;
+ }
+
+.jumbotron {
+    background-color:white;
+    color:#068b8b;
+}
+
+figcaption a{
+    color: gray;
+}
+/* .lead {
+    color:#068b8b;
+} */
+
+/* tr{
+    width:100%;
+    display: inline-table;
+    table-layout:fixed;
+}
+
+thead {
+    width:100%;
+    
+}
+
+table {
+    height:500px;
+    width:100%;
+}
+tbody {
+    overflow-y:auto;
+    height: 450px;
+    width:100%;
+    position: absolute;
+        
+} */
+/* .panel-thumbnail {
+    background-color:white;
+    padding:2px;
+    border:2px;
+    margin: 2px;
+} */

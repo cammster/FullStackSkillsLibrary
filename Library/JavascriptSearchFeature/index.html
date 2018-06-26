@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Find the UFO of Your Dreams</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+
+      <div class="row">
+        <div class="col-lg-8">
+            <h1 class="display-3">Find the UFO of your Dreams</h1> 
+            <p class="lead">Begin your search for a relationship that is out of this world!</p>       
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" id="search" role="button" title="Returns all Sitings">Search All Sitings</a>
+            </p> 
+        </div> 
+        <div class="col-md-4"><img src="https://media.giphy.com/media/xTiTnM7j4dSsqgrsje/giphy.gif" width="90%" height="90%" align="center"></div>
+      </div>    
+      <hr class="my-4">    
+
+      <div class="row">
+        <div class="col-lg-8">                
+            <p>Search through UFO sitings below for where to find your next catch.</p> 
+            <!-- <span>User can choose the following input combinations to filter results:</span>    -->
+            <div class="form-group">
+                <input type="text" class="form-control" id="date" placeholder="Date ex. 'DD/MM/YYYY' ">
+                <input type="text" class="form-control" id="country" placeholder="Country ex. 'US' ">
+                <input type="text" class="form-control" id="state" placeholder="State ex. 'NY' ">
+                <input type="text" class="form-control" id="city" placeholder="City ex. 'Benton' ">
+                <input type="text" class="form-control" id="shape" placeholder="Shape ex. 'light' 'flash' 'triangle' ">                   
+            </div>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" id="filtersearch" title="Filters table based on user selections" role="button">Filtered Search</a>
+            </p>    
+                    
+        </div>        
+        <div class="col-md-4">
+          <img src="https://media.giphy.com/media/3oEduFoscQShmJuBoY/giphy.gif" width="90%" height="90%" align="center">
+        </div>
+      </div>    
+      <div class="row">
+        <div class="col-md-12">
+            <span><i>*User can choose the following input combinations to filter results: All fields, No fields, Date Only, Country Only, Country+State Only, Shape Only</i></span>   
+        </div>
+      </div>    
+      
+    </div>
+  </div>  
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>DateTime</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Country</th>
+              <th>Shape</th>
+              <th>Duration</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="data.js" type="text/javascript"></script>
+  <script src="index.js" type="text/javascript"></script>
+
+</body>
+
+</html>

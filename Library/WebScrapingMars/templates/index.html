@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Info</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>News from the Red Planet</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get the latest on Mars!</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h3><strong>Latest Headlines</strong></h3>           
+            <section><strong>{{ mars.stories.0.dateposted }} : {{mars.stories.0.title  }} </strong><br>
+                    {{ mars.stories.0.paragraph }}<br>
+            </section>            
+        </div>
+    </div> 
+
+    <div class="row">
+        <div class="col-md-6">
+        <h3><strong>Featured Mars Image</strong></h3>
+            <img src={{mars.image}} align=left width="100%" height="100%"  style="padding:10px; border:5px; margin: 10px;" >
+        </div>
+        <div class="col-md-6">
+        <table style="border: 1px solid black;">
+            <tbody>
+                <tr><h3><strong>Current Weather on Mars</strong></h3>{{ mars.weather }}</tr>
+            </tbody>
+        </table>            
+        <h3><strong>Mars Facts</strong></h3>
+        {{ mars.facts | safe }}
+    </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+        <h3 align=center><strong>Mars Hemispheres</strong></h3>
+
+    <div class="row">              
+        <div class="col-md-6" style="text-align:center;">
+            <figure>
+                <img align=center src={{mars.hemispheres.0.image}} width="60%" height="60%">
+                <figcaption><strong><h5 >{{ mars.hemispheres.0.title }}</strong></h5></figcaption>
+            </figure>            
+        </div> 
+        <div class="col-md-6" style="text-align:center;">
+            <figure>
+                <img src={{mars.hemispheres.1.image}} width="60%" height="60%" >
+                <figcaption><strong><h5 >{{mars.hemispheres.1.title}}</strong></h5></figcaption>
+            </figure>
+        </div>            
+    </div>
+    <div class="row">              
+        <div class="col-md-6"style="text-align:center;">
+            <figure>
+                <img src={{mars.hemispheres.2.image}} align="middle" width="60%" height="60%">
+                <figcaption><strong><h5 >{{ mars.hemispheres.2.title }}</strong></h5></figcaption>
+            </figure>            
+        </div> 
+        <div class="col-md-6" style="text-align:center;">
+            <figure>
+                <img src={{mars.hemispheres.3.image}} width="60%" height="60%" >
+                <figcaption><strong><h5 >{{mars.hemispheres.3.title}}</strong></h5></figcaption>
+            </figure>
+        </div>            
+    </div>
+
+  </div>
+
+</body>
+
+</html>

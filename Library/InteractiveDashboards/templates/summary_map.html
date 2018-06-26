@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SummaryMap</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+
+    <div class="jumbotron" align="center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p class="lead">Use the charts below to explore the dataset</p>
+        <hr class="my-4">
+        <p class="lead">Select a sample from the dropdown to update the dashboard</p>
+        <p class="lead">
+            <div class="dropdown">
+                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select Sample
+                        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                    </button>
+                </div>
+        </p>   
+        <div id="summary_map"></div>
+    </div>
+</body>
+<script>
+      function populateDropdown() {
+        var $selDataset=document.getElementById("selDataset");
+        d3.json("/dropdown/", function(error, response) {
+        if (error) return console.warn(error);
+        for (r=0; r<response.length; r++) {
+            name=response[r];
+            var $option = document.createElement("option");
+            $option.innerHTML = name;
+            $option.setAttribute = ("value",response[r]);
+            $selDataset.appendChild($option);       
+            
+        };
+    })}
+    populateDropdown(); 
+    function map_init() {
+        Plotly.d3.json("/summarymap/", function(error, response){
+            if(error) throw error;
+            // var country = response.country;
+            console.log(response);
+        });
+}
+    map_init();
+
+
+
+    //   function unpack(rows, key) {
+    //       return rows.map(function(row) { return row[key]; });
+    
+
+    //    var data = [{
+    //         type: 'choropleth',
+    //         locations: unpack(rows, 'code'),
+    //         z: unpack(rows, 'gdp'),
+    //         text: unpack(rows, 'country'),
+    //         colorscale: [
+    //             [0,'rgb(5, 10, 172)'],[0.35,'rgb(40, 60, 190)'],
+    //             [0.5,'rgb(70, 100, 245)'], [0.6,'rgb(90, 120, 245)'],
+    //             [0.7,'rgb(106, 137, 247)'],[1,'rgb(220, 220, 220)']],
+    //         autocolorscale: false,
+    //         reversescale: true,
+    //         marker: {
+    //             line: {
+    //                 color: 'rgb(180,180,180)',
+    //                 width: 0.5
+    //             }
+    //         },
+    //         tick0: 0,
+    //         zmin: 0,
+    //         dtick: 1000,
+    //         colorbar: {
+    //             autotic: false,
+    //             tickprefix: '$',
+    //             title: 'GDP Billions US$'
+    //         }
+    //   }];
+
+    //   var layout = {
+    //       title: '2014 Global GDP Source:  CIA World Factbook',
+    //       geo:{
+    //           showframe: false,
+    //           showcoastlines: false,
+    //           projection:{
+    //               type: 'fill'
+    //           }
+    //       }
+    //   };
+    //   Plotly.plot(colormap, data, layout, {showLink: false});
+
+</script>
+</html>

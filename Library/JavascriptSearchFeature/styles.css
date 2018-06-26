@@ -1,0 +1,21 @@
+.form-control {
+  /* display: inline-block; */
+  width: 350px;
+  margin-top: 5px;
+}
+
+body {
+  background-color: lightslategray;
+}
+
+table {
+  background-color: whitesmoke;
+}
+
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

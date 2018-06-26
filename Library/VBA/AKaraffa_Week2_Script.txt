@@ -1,0 +1,134 @@
+
+Sub StockSummary()
+'------------------------FUNCTION PURPOSE: Take Daily Stock Data and Summarize by Ticker-------------------------------------------------------------------
+'------------------------ASSUMPTIONS: Data has already been sorted by ticker (A to Z) and date (OLD to NEW)----------------------------------------------------------------------
+'------------------------LIMITATIONS: When the First Opening Price of the Year or Total Change in Price in a Year is ZERO, Yearly %Change Shows as ZERO----
+'------------------------DESCRIPTION: Function will run on all sheets in a workbook------------------------------------------------------------------------
+'-------------------------------------Function loops through each row collecting key data and printing into two summary tables-----------------------------
+
+
+For Each ws In Worksheets
+    'Give Headers for Stock Summary Table 1
+    ws.Range("I1").Value = "Ticker"
+    ws.Range("J1").Value = "Yearly Change"
+    ws.Range("K1").Value = "Percent Change"
+    ws.Range("L1").Value = "Total Stock Volume"
+
+    'Count Number of Rows for Loop to Run
+    Dim LastRowData As Long
+    LastRowData = ws.Cells(Rows.Count, 1).End(xlUp).Row
+  
+    'Establish Variables for Stock Summary Table 1
+    Dim OpenVol As Double
+    Dim ContinueVolSum As Double
+    ContinueVolSum = 0
+    Dim OpenPrice As Double
+    Dim ClosePrice As Double
+    Dim YearlyChange As Double
+    Dim OpenRow As Long 'For recording first row of new ticker, used to capture opening stock
+    OpenRow = 2
+    Dim PercentChange As Double
+
+    'Loop to fill in Stock Summary Table 1
+    For i = 1 To LastRowData
+    
+        'Check for when new Stock Ticker Name Appears
+        If ws.Cells(i, 1).Value <> ws.Cells(i + 1, 1).Value Then
+        
+        'Collect New Ticker Name and Print to Summary Table
+            TickName = ws.Cells(i + 1, 1).Value
+            LastRow = ws.Cells(Rows.Count, 9).End(xlUp).Row
+            ws.Cells(LastRow + 1, 9).Value = TickName 'Print Tick Name on New Row in Summary Table
+                       
+            'Collect Next Ticker's Opening Stock Volume and Open Price
+            OpenVol = ws.Cells(i + 1, 7).Value
+            OpenPrice = ws.Cells(OpenRow, 3).Value
+            ws.Cells(LastRow + 1, 12).Value = OpenVol
+   
+            If i > 1 Then 'Need to Wait until after first iteration to collect yearly close
+                ClosePrice = ws.Cells(i, 6).Value
+                YearlyChange = ClosePrice - OpenPrice
+    
+                'Calculates Percent Change and Accounts for instances when Percent Change is zero
+                If YearlyChange = 0 Or OpenPrice = 0 Then
+                    PercentChange = 0
+                Else
+                    PercentChange = YearlyChange / OpenPrice
+                End If
+            
+                'Print Values to Summary Table on Same Row As Ticker Name
+                ws.Cells(LastRow, 10).Value = YearlyChange
+                ws.Cells(LastRow, 11).Value = PercentChange
+                ws.Cells(LastRow, 11).NumberFormat = "0.00%"
+                 
+                'Conditional Formatting Summary Table to Indicate Positive Change with Green and Negative Yearly Change with Red
+                If PercentChange <= 0 Then
+                    ws.Cells(LastRow, 11).Interior.ColorIndex = 3 'Red
+                Else
+                    ws.Cells(LastRow, 11).Interior.ColorIndex = 4 'Green
+                End If
+                
+            OpenRow = i + 1 'Update OpenRow for Next Iteration to Capture OpenPrice
+            End If
+            
+        'Continue adding subsequent stock volumes while Ticker remains the same
+        Else
+            ContinueVolSum = ws.Cells(i + 1, 7).Value + ws.Cells(LastRow + 1, 12).Value
+            ws.Cells(LastRow + 1, 12).Value = ContinueVolSum
+        End If
+    Next i
+
+    'Add Summary Table 2 Titles
+    ws.Range("O2").Value = "Greatest % Increase"
+    ws.Range("O3").Value = "Greatest %Decrease"
+    ws.Range("O4").Value = "Greatest Total Volume"
+    ws.Range("P1").Value = "Ticker"
+    ws.Range("Q1").Value = "Value"
+
+    'Establish Max and Min Variables
+    Dim MaxChange As Variant
+    Dim MinChange As Variant
+    Dim MaxVol As Double
+    MaxChange = 0
+    MinChange = 0
+    MaxVol = 0
+    Dim countsumtablerow As Integer
+    countsumtablerow = ws.Cells(Rows.Count, 9).End(xlUp).Row 'Count Total Rows in Stock Summary Table 1
+    ws.Cells(countsumtablerow + 1, 12).Clear 'Clear Extra Entry for Vol in Stock Sum Table - Above Loops prints the last open volume after the last row is complete
+
+    'Loop through Summary Table 1 to Find Max&Min Yearly Change
+    For i = 2 To countsumtablerow
+        If ws.Cells(i, 11).Value >= MaxChange Then
+            MaxChange = ws.Cells(i, 11).Value
+            MaxChangeTick = ws.Cells(i, 9).Value
+    
+        ElseIf ws.Cells(i, 11).Value <= MinChange Then
+            MinChange = ws.Cells(i, 11).Value
+            MinChangeTick = ws.Cells(i, 9).Value
+        End If
+     Next i
+    
+    'Loop through Summary Table 1 to Find Max Volume
+    For j = 2 To countsumtablerow
+        If ws.Cells(j, 12).Value >= MaxVol Then
+            MaxVol = ws.Cells(j, 12).Value
+            MaxVolTick = ws.Cells(j, 9).Value
+        End If
+    Next j
+
+    'Print Updated Variables to Stock Summary Table 2
+    ws.Range("P2").Value = MaxChangeTick
+    ws.Range("Q2").Value = MaxChange
+    ws.Cells(2, 17).NumberFormat = "0.00%"
+    ws.Range("P3").Value = MinChangeTick
+    ws.Range("Q3").Value = MinChange
+    ws.Cells(3, 17).NumberFormat = "0.00%"
+    ws.Range("P4").Value = MaxVolTick
+    ws.Range("Q4").Value = MaxVol
+
+Next ws
+End Sub
+
+
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Temp</title>
+<!-- Bring in bootstrap stylesheet -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+              
+</head>
+
+<body>
+    <!--Navbar Links and Dropdown-->
+        <nav class="navbar navbar-default">
+
+                <div class="container-fluid">
+
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            </button>
+                        <a class="navbar-brand" href="HomePage.html">Latitude</a>
+                    </div>                
+    
+                    <div class="collapase navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="Comparison.html">Comparison <span class="sr-only"></span></a></li>
+                            <li class="active"><a href="Data.html">Data</a></li>
+                            <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
+                                    aria-expanded="false">Visualizations <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="Humidity.html">Humidity</a></li>
+                                        <li><a href="Wind.html">Wind</a></li>
+                                        <li><a href="Temp.html">Temperature</a></li>
+                                        <li><a href="Cloudiness.html">Cloudiness</a></li>
+                                    </ul>
+                            </li>
+                        </ul>   
+                    </div>          
+                </div>    
+        </nav>
+    
+<!--Webpage Contents-->
+    <div class="container-fluid">
+        <div class="row">       
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                  <div class="panel-body">
+                  
+                    <h1>Temperature</h1>
+                    <hr>                  
+                    <img class="pull-left" src="Images/LatitudevsTemp.png" alt="Latitude vs Temperature">
+                    <p>The graph shows that temperature decreases as latitude increases from the equator (latitude > 0. Most cities below the equator (latitude <0 ) have temperatures between 60 and 100 degrees Fahrenheit, indicating summer in the southern hemisphere.  </p>
+                    <p>If you prefer warmer weather, latitudes closer to the equator (-20 >latitude< 20 ) have the highest temperatures.  </p>
+                    <p><i>*Note that this analysis is based on weather data collected from the Open Weather Map API for 600 randomly selected cities data on March 1 2018.</i></p>
+                    <p><i>*For more information on Open Weather Map API click <a href="https://openweathermap.org/api">here</a>.</i></p>
+                    <p><i>***To view the markdown for how this graph was generated, here is the <a href="https://github.com/cammster/UTDataHmwkJan2018_AKaraffa/tree/master/Homework/Week6Apis">GitHub repo link.</a></i></p>
+                </div>             
+              </div>
+            </div>            
+        </div>
+        
+    </div>
+    
+<!--Bottom Navbar-->
+    <div class="container-fluid">
+        
+    <nav class="footer">                
+            <hr>
+            University of Texas at Austin, Data Analytics and Visualization        
+            <p>Andrea Karaffa 2018</p>
+
+                <!-- <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          
+                    </button>
+                    <a class="navbar-brand" href="#">Latitude</a> -->
+
+            
+    </nav>
+    </div>
+    
+</body>
+</html>
