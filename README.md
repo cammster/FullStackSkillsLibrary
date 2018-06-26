@@ -21,7 +21,7 @@ Please use the links below to navigate to specific projects.
 ### Web
 * #### [Web Design (HTML/CSS)](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/Web)
 * #### [Web Scraping - MARS](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/WebScrapingMars)
-* #### Javascript Search Feature
+* #### [Javascript Search Feature - UFO's and X-File Giphy](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/JavascriptSearchFeature)
 * #### Javascript/D3
 
 ### Full Stack
