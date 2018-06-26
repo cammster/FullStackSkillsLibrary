@@ -1,5 +1,5 @@
 # FullStackSkillsLibrary
-Welcome! This repo contains projects utilizing various full stack data visualization tools.  
+Welcome! This repo contains projects utilizing various full stack data visualization tools. And as always, an attempt at humor is sprinkled throughout when possible.
 
 Please use the links below to navigate to specific projects. 
 
@@ -19,7 +19,7 @@ Please use the links below to navigate to specific projects.
 * #### SQL Advanced
 
 ### Web
-* #### Web Design (HTML/CSS)
+* #### [Web Design (HTML/CSS)](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/Web)
 * #### [Web Scraping - MARS](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/WebScrapingMars)
 * #### Javascript Search Feature
 * #### Javascript/D3
