@@ -25,6 +25,6 @@ Please use the links below to navigate to specific projects.
 * #### Javascript/D3
 
 ### Full Stack
-* #### [Interactive Dashboards using Flask App and SQLite Database](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/InteractiveDashboards "BellyButtonDiversity")
+* #### [Interactive Dashboards using Flask App and SQLite Database - BELLY BUTTON DIVERSITY](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/InteractiveDashboards "BellyButtonDiversity")
 
 
