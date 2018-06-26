@@ -3,11 +3,11 @@
 
 This application extracts the latest information on Mars from 5 web sources:
 
-1. NASA News Site https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest
-2. NASA Jet Propulsion Laboratory, California Institute of Technology https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars
-3. Mars Twitter Account https://twitter.com/marswxreport?lang=en
-4. Mars Fact Page https://space-facts.com/mars/
-5. Mars Hemispheres https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars
+1. [NASA News Site](https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest)
+2. [NASA Jet Propulsion Laboratory, California Institute of Technology](https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars)
+3. [Mars Twitter Account](https://twitter.com/marswxreport?lang=en)
+4. [Mars Fact Page](https://space-facts.com/mars/)
+5. [Mars Hemispheres](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars)
 
 ## Tools Used: 
 * Database: MongoDB (needed for storing pictures and easy to access keys using Jinga)
@@ -19,7 +19,17 @@ This application extracts the latest information on Mars from 5 web sources:
 When the app starts up, the html index references data from the last scraping session, which is stored in the MongoDB. 
 Then, upon clicking "Get the Latest on Mars" button, the application runs the /scrape route.
 
-* 
+* The Flask App 
+To see more details on the /scrape route, open the [file](https://github.com/cammster/FullStackSkillsLibrary/blob/master/Library/WebScrapingMars/scrape_mars.py)
+
+![Mars Flask App](https://github.com/cammster/FullStackSkillsLibrary/blob/master/Library/WebScrapingMars/Images/MarsAppCode.PNG)
+
+
+* Mongo DB
+This shows the breakdown of the data stored in Mongo.
+![MongoDB for Mars Dictionary](https://github.com/cammster/FullStackSkillsLibrary/blob/master/Library/WebScrapingMars/Images/MarsMongoPic.PNG)
+
+* HTML and Jinga
 
 ## To Run the App: 
 This app runs locally, so the user has to take the following steps to run it: 
