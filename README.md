@@ -20,6 +20,7 @@ Please use the links below to navigate to specific projects.
 
 ### Web
 * #### Web Design (HTML/CSS)
+* #### [Web Scraping - MARS](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/WebScrapingMars)
 * #### Javascript Search Feature
 * #### Javascript/D3
 
