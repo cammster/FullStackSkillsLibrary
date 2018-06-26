@@ -1,4 +1,6 @@
 # Web Scraping Mars Facts 
+! [Picture of App](https://github.com/cammster/FullStackSkillsLibrary/blob/master/Library/WebScrapingMars/Images/OverallSitePicture.PNG)
+
 This application extracts the latest information on Mars from 5 web sources:
 
 1. NASA News Site https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest
