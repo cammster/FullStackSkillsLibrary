@@ -4,15 +4,15 @@ Welcome! This repo contains projects utilizing various full stack data visualiza
 Please use the links below to navigate to specific projects. 
 
 ### Excel
-* #### Excel
-* #### VBA
+* #### [Excel](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/Excel)
+* #### [VBA](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/VBA)
 
 ### Python
-* #### Python Basics
-* #### Pandas
-* #### Matplotlib
-* #### Connecting to APIs
-* #### Social Analytics using Tweepy
+* #### [Python Basics](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/PythonBasics)
+* #### [Pandas](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/PandasSchoolStats)
+* #### [Matplotlib](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/Matplotlib)
+* #### [Connecting to APIs](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/APIsWeatherData)
+* #### [Social Analytics using Tweepy](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/SocialAnalytics)
 
 ### SQL
 * #### SQL Queries
