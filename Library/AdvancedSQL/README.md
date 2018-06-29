@@ -9,8 +9,10 @@ weather could be like based on the previous year's weather.
 
 ## Process
 1. #### [Data Engineering](https://github.com/cammster/FullStackSkillsLibrary/blob/master/Library/AdvancedSQL/data_engineering.ipynb)
-This step reads two csv files, performs clean up and writes cleaned files to a new location.
+This step reads two csv files, performs clean up and writes cleaned files to a new location. 
+
 2. #### [Database Engineering](https://github.com/cammster/FullStackSkillsLibrary/blob/master/Library/AdvancedSQL/database_engineering.ipynb)
+
 * Read Cleaned files into Pandas dataframes
 * Use the SQLAlchemy engine and connection to create a database
 * Use SQLAlchemy declarative_base and create classes for each table
