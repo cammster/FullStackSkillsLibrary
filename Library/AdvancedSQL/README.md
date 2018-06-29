@@ -15,4 +15,5 @@ This step reads two csv files, performs clean up and writes cleaned files to a n
 ![Create Tables](https://github.com/cammster/FullStackSkillsLibrary/blob/master/Library/AdvancedSQL/Images/databasecreatetable.PNG)
 
 * Analyze Data
+![Hawaii Precipitation Data 12 months](https://github.com/cammster/FullStackSkillsLibrary/blob/master/Library/AdvancedSQL/Images/Precipitation_Over_12Months.png)
 
