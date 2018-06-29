@@ -1,4 +1,4 @@
-# What Will Your Weather Be Like on Your Vacation?
+# When is the Best Time to Vacation in Hawaii?
 This project utilizes historical weather observations from different stations in Hawaii, to show a potential vacationer what the
 weather could be like based on the previous year's weather.
 
@@ -33,3 +33,6 @@ The analysis shows the vacationer the following information to evaluate the timi
 ![Historical Daily Normals](https://github.com/cammster/FullStackSkillsLibrary/blob/master/Library/AdvancedSQL/Images/Historical_Daily_Normals.png)
 
 4. Deploy Database Queries to Flask App to make data available
+This is one of the app routes available:
+![Flask App Route](https://github.com/cammster/FullStackSkillsLibrary/blob/master/Library/AdvancedSQL/Images/exampleapproute.PNG)
+
