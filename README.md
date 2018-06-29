@@ -16,7 +16,7 @@ Please use the links below to navigate to specific projects.
 
 ### SQL
 * #### [SQL Queries](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/SQLQueries)
-* #### [SQL Advanced](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/AdvancedSQL)
+* #### [SQL Advanced - When is the Best Time to Vacation in Hawaii?](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/AdvancedSQL)
 
 ### Web
 * #### [Web Design (HTML/CSS)](https://github.com/cammster/FullStackSkillsLibrary/tree/master/Library/Web)
